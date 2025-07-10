@@ -1,4 +1,4 @@
-#  OutreachHub
+# 💼 OutreachHub
 
 This project implements a **multi-tenant platform** comprising two major portals:
 
@@ -9,9 +9,9 @@ The platform is designed for scalability, modularity, and ease of use, with clea
 
 ---
 
-##  Features
+## 🛠️ Features
 
-### Admin Portal
+### 🔑 Admin Portal
 Only accessible by admin users.
 
 #### Modules
@@ -24,7 +24,7 @@ Only accessible by admin users.
 
 ---
 
-### OutreachHub Portal
+### 👩‍💼 OutreachHub Portal
 Accessible by workspace users only.
 
 #### Workspace Roles
