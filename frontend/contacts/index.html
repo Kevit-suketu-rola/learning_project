@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+</head>
+
+<body>
+    <nav class="nav">
+
+        <!-- Logo -->
+        <div class="left">
+            <h1 id="nav-head"><a href="../home/index.html">OutreachHub</a></h1>
+        </div>
+
+        <!-- Links to other pages -->
+        <div class="links">
+            <ul>
+                <li><a href="../home/">Home</a></li>
+                <li><a href="../contacts/">Contacts</a></li>
+                <li><a href="#">Campaigns</a></li>
+                <li><a href="#">About</a></li>
+
+                <!-- select - md -->
+                <div class="hamburger">
+                    <select name="menu" id="menu" onchange="navigateTo(this)">
+                        <option value="">Menu</option>
+                        <option value="../home/index.html">Home</option>
+                        <option value="../contacts/index.html">Contacts</option></a>
+                        <option value="campaigns">Campaigns</option></a>
+                        <option value="about">About</option></a>
+                    </select>
+                </div>
+
+                <!-- Logout Buttons -->
+                <button id="logout"><a href="../authentication/login.html">Logout</a></button>
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <div class="main">
+
+        <!-- Welcome -->
+        <h3 id="head">Contacts</h3>
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <!-- Search Form -->
+            <form action="" id="search-form">
+                <input type="text" id="search" placeholder="Search Contacts">
+                <select name="" id="select">
+                    <option value="name">Name</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="email">Email</option>
+                    <option value="business-name">Business Name</option>
+                    <option value="workspace">Workspace</option>
+                </select>
+                <input id="search-btn" type="submit" value="Search" />
+            </form>
+
+            <!-- Add Contact Button -->
+            <button id="add-contact" onclick="openAddDialogue()">Add Contact</button>
+
+            <!-- Result/Default Contact Table -->
+            <div class="contact-container">
+                <table id="contact-table">
+                    <thead>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody id="data"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Dialogue Boxes -->
+        <div class="hidden" id="show-dialogue-container">
+            <div class="hidden" id="show-dialogue">
+                <button id="close" onclick="resetDialogue()"> close</button>
+                <table id="show-table">
+                    <tr>
+                        <th>Name:</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Mobile:</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Business:</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Campaign:</th>
+                        <td>John Doe</td>
+                    </tr>
+                </table>
+                <div class="btn-container"><button id="edit" onclick="openEditDialouge()">Edit</button><button
+                        id="delete" onclick="deleteEntry()">Delete</button></div>
+            </div>
+            <form action="" id="edit-form" class="hidden">
+                <button id="close-edit" onclick="resetDialogue()">close</button>
+                <h3>Edit Contact List</h3>
+                <input type="text" id="name" placeholder="Enter Name">
+                <input type="email" id="email" placeholder="Enter Email">
+                <input type="tel" id="mobile" placeholder="Enter Mobile">
+                <input type="text" id="business-name" placeholder="Enter Business Name">
+                <input type="text" id="workspace" placeholder="Enter Workspace">
+                <button id="update-btn" type="submit" onclick="updateEntry()">Submit</button>
+            </form>
+        </div>
+        <script src="../script/contacts.js"></script>
+</body>
+
+</html>
