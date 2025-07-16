@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.main {
+  height: 91.7vh;
+  display: flex;
+  flex-direction: column;
+}
+.main #welcome {
+  font-size: xx-large;
+  margin: 20px 0 0 20px;
+  color: white;
+}
+.main .content {
+  height: 100vh;
+  width: 100vw;
+  margin: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.main .content .col1 {
+  display: flex;
+}
+.main .content .col1 .details .chart {
+  width: 100%;
+}
+.main .content .col1 .details .chart img {
+  border-radius: 25px;
+  transition: all 500ms ease-in-out;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.main .content .col1 .details .chart img:hover {
+  scale: 1.03;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+}
+.main .content .col1 .details .list table {
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+}
+.main .content .col1 .details .list table thead th {
+  background-color: #7826fa;
+  padding: 10px 0;
+}
+.main .content .col1 .details .list table thead th:first-child {
+  border-radius: 7px 0 0 0;
+}
+.main .content .col1 .details .list table thead th:last-child {
+  border-radius: 0 7px 0 0;
+}
+.main .content .col1 .details .list table tbody tr td {
+  text-align: center;
+  background-color: #8a5afa;
+  padding: 15px 0;
+  border-bottom: 1px solid wheat;
+}
+.main .content .col2 {
+  margin: 20px;
+  color: white;
+  width: 60%;
+}
+.main .content .col2 .about {
+  display: flex;
+  justify-content: space-between;
+}
+.main .content .col2 .about .text {
+  margin-right: 100px;
+}
+.main .content .col2 .about .text h2 {
+  margin-bottom: 10px;
+}
+.main .content .col2 .about .text p {
+  text-align: justify;
+  line-height: 1.4;
+}
+.main .content .col2 .about img {
+  width: 50vh;
+}
+.main .content .col2 .graph {
+  display: flex;
+  padding: 20px 0;
+  gap: 10px;
+}
+.main .content .col2 .graph img:first-child {
+  width: 100%;
+}/*# sourceMappingURL=home.css.map */
