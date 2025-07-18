@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.main {
+  height: 91.7vh;
+  display: flex;
+  flex-direction: column;
+}
+.main #head {
+  font-size: xx-large;
+  margin: 50px 0 0 20px;
+  color: #7826fa;
+}
+.main .content #search-form {
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main .content #search-form #search {
+  width: 700px;
+  height: 50px;
+  padding: 5px 5px 5px 20px;
+  border-radius: 25px;
+  border: 1px solid #7100f3;
+  background-color: #d5c2ff;
+}
+.main .content #search-form #search-btn, .main .content #search-form #select {
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #7100f3;
+}
+.main .content #search-form #select {
+  background-color: #d5c2ff;
+}
+.main .content #search-form #search-btn {
+  background-color: #9d4edd;
+  color: white;
+  font-weight: 700;
+}
+.main .content #add-contact {
+  width: 100px;
+  height: 50px;
+  margin: 0 30px;
+  padding: 0 5px;
+  border-radius: 25px;
+  border: 1px solid #7100f3;
+  background-color: #fff;
+  font-weight: bold;
+}
+.main .content #add-contact:hover {
+  cursor: pointer;
+  background-color: #c18bff;
+  color: white;
+}
+.main .content .contact-container {
+  margin: 10px;
+  padding: 50px;
+  width: 100%;
+  display: block;
+}
+.main .content .contact-container #contact-table {
+  margin: auto;
+  width: 40%;
+  border-bottom: 1px solid black;
+  border-radius: 20px;
+  border-collapse: collapse;
+}
+.main .content .contact-container #contact-table thead th {
+  padding: 15px 5px;
+  margin: 50px;
+  border-bottom: 1px solid black;
+  background-color: #d5c2ff;
+}
+.main .content .contact-container #contact-table thead th:first-child {
+  border-radius: 10px 0 0 0;
+}
+.main .content .contact-container #contact-table thead th:last-child {
+  border-radius: 0 10px 0 0;
+}
+.main .content .contact-container #contact-table tbody tr td {
+  color: black;
+  border-spacing: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.main .content .contact-container #contact-table tbody tr td button {
+  margin: 2px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.main .content .contact-container #contact-table tbody tr td button:hover {
+  cursor: pointer;
+}
+.main .content .contact-container #contact-table tbody tr td button:active {
+  transform: scale(0.95);
+}
+.main .content .contact-container #contact-table tbody tr td .edit-btn {
+  background-color: rgb(221, 199, 0);
+}
+.main .content .contact-container #contact-table tbody tr td .delete-btn {
+  background-color: rgb(255, 42, 42);
+}
+.main .content .contact-container #contact-table tbody tr td .show-btn {
+  background-color: rgb(0, 167, 0);
+}
+@media screen and (max-width: 992px) {
+  .main .content .contact-container #contact-table {
+    width: 95%;
+    font-size: 16px;
+  }
+}
+
+#show-dialogue-container {
+  position: fixed;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+#show-dialogue-container #show-dialogue {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  top: 10%;
+  left: 20%;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#show-dialogue-container #show-dialogue button {
+  position: inherit;
+  right: 10px;
+  top: 10px;
+  padding: 5px;
+  background-color: rgb(255, 42, 42);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+#show-dialogue-container #show-dialogue button:hover {
+  cursor: pointer;
+}
+#show-dialogue-container #show-dialogue table {
+  width: 60%;
+  border-collapse: collapse;
+}
+#show-dialogue-container #show-dialogue table tr th,
+#show-dialogue-container #show-dialogue table tr td {
+  padding: 10px;
+  border: 1px solid black;
+}
+#show-dialogue-container #show-dialogue .btn-container {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+#show-dialogue-container #show-dialogue .btn-container button {
+  padding: 10px;
+  width: 70px;
+  background-color: #9d4edd;
+  color: white;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  #show-dialogue-container #show-dialogue {
+    font-size: 12px;
+    width: 80%;
+    left: 10%;
+  }
+}
+#show-dialogue-container #edit-form {
+  position: relative;
+  flex-direction: column;
+  width: 30%;
+  padding: 23px;
+  background-color: white;
+  border-radius: 7px;
+  margin: 5% auto;
+}
+#show-dialogue-container #edit-form input {
+  padding: 5px 5px 5px 15px;
+  border-radius: 18px;
+  height: 40px;
+  margin: 10px;
+  border: 1px solid #9d4edd;
+  background-color: #d5c2ff;
+}
+#show-dialogue-container #edit-form #close-edit {
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+  background-color: rgb(255, 42, 42);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+#show-dialogue-container #edit-form #close-edit:hover {
+  cursor: pointer;
+}
+#show-dialogue-container #edit-form #update-btn {
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  margin: 10px auto;
+  background-color: #9d4edd;
+  border-radius: 20px;
+  border: none;
+}
+#show-dialogue-container #edit-form #update-btn:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  #show-dialogue-container #edit-form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #show-dialogue-container #edit-form {
+    width: 80%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}/*# sourceMappingURL=contacts.css.map */

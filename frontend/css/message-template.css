@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #d5c2ff;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.top-section .search-sort-filter {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.top-section .search-sort-filter .search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #f9f9f9;
+}
+.top-section .search-sort-filter .search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  background-color: transparent;
+}
+.top-section .search-sort-filter .search-bar .search-icon {
+  margin-left: 10px;
+  color: #555;
+}
+.top-section .search-sort-filter .sort-by,
+.top-section .search-sort-filter .filter-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-section .search-sort-filter .sort-by label,
+.top-section .search-sort-filter .filter-by label {
+  font-weight: bold;
+  color: #555;
+}
+.top-section .search-sort-filter .sort-by select,
+.top-section .search-sort-filter .filter-by select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.top-section .add-button {
+  background-color: #9d4edd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.top-section .add-button svg {
+  fill: white;
+}
+.top-section .add-button:hover {
+  background-color: #7826fa;
+}
+
+.main {
+  min-height: 91.7vh;
+  display: flex;
+  flex-direction: column;
+}
+.main #head {
+  font-size: xx-large;
+  margin: 50px 0 0 20px;
+  color: #7826fa;
+}
+.main #search-form {
+  width: 90%;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main #search-form #search {
+  width: 700px;
+  height: 50px;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: 1px solid #7100f3;
+  background-color: #d5c2ff;
+}
+.main #search-form #search-btn, .main #search-form #select {
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #7100f3;
+}
+.main #search-form #select {
+  background-color: #d5c2ff;
+}
+.main #search-form #search-btn {
+  background-color: #9d4edd;
+  color: white;
+  font-weight: 700;
+}
+.main #add-template {
+  width: 140px;
+  height: 50px;
+  margin: 0 30px;
+  padding: 0 5px;
+  border-radius: 25px;
+  border: 1px solid #7100f3;
+  background-color: #fff;
+  font-weight: bold;
+}
+.main #add-template:hover {
+  cursor: pointer;
+  background-color: #c18bff;
+  color: white;
+}
+.main .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px;
+}
+.main .template-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #d5c2ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.main .template-card .card-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main .template-card .card-left img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .template-card .card-left .info {
+  display: flex;
+  flex-direction: column;
+}
+.main .template-card .card-left .info .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.main .template-card .card-left .info .tag,
+.main .template-card .card-left .info .type,
+.main .template-card .card-left .info .workspace {
+  font-size: 0.9rem;
+  color: #444;
+}
+.main .template-card .card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+  overflow: hidden;
+}
+.main .template-card .card-right .content-preview {
+  font-size: 0.95rem;
+  color: #333;
+  max-width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 768px) {
+  .main .template-card .card-right .content-preview {
+    display: none;
+  }
+}
+.main .template-card .card-right .card-actions {
+  display: flex;
+  gap: 10px;
+}
+.main .template-card .card-right .card-actions button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 70px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.main .template-card .card-right .card-actions button:hover {
+  cursor: pointer;
+}
+.main .template-card .card-right .card-actions button.show-btn {
+  background-color: rgb(0, 167, 0);
+}
+@media screen and (max-width: 768px) {
+  .main .template-card .card-right .card-actions button {
+    position: absolute;
+    left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main .template-card {
+    display: block;
+    position: relative;
+    min-height: 150px;
+    overflow: hidden;
+  }
+}
+
+#dialogue-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+}
+#dialogue-container #show-dialogue {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 60%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 20px;
+}
+#dialogue-container #show-dialogue button {
+  align-self: flex-end;
+  background-color: rgb(255, 42, 42);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#dialogue-container #show-dialogue button:hover {
+  cursor: pointer;
+}
+#dialogue-container #show-dialogue #show-card {
+  padding: 10px;
+}
+#dialogue-container #show-dialogue .btn-container {
+  display: flex;
+  gap: 20px;
+}
+#dialogue-container #show-dialogue .btn-container button {
+  padding: 10px;
+  width: 80px;
+  background-color: #9d4edd;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+#dialogue-container #edit-form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 40%;
+  margin: 5% auto;
+  flex-direction: column;
+  gap: 10px;
+  height: 51vh;
+}
+#dialogue-container #edit-form input,
+#dialogue-container #edit-form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #9d4edd;
+  background-color: #d5c2ff;
+}
+#dialogue-container #edit-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+#dialogue-container #edit-form #close-edit {
+  align-self: flex-end;
+  background-color: rgb(255, 42, 42);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#dialogue-container #edit-form #update-btn {
+  background-color: #9d4edd;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  align-self: center;
+}
+#dialogue-container #edit-form #update-btn:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}/*# sourceMappingURL=message-template.css.map */

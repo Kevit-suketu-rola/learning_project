@@ -1,0 +1,121 @@
+@import "variables.scss";
+
+body {
+  overflow: hidden;
+}
+.main {
+  height: 91.7vh;
+  display: flex;
+  flex-direction: column;
+
+  #welcome {
+    font-size: xx-large;
+    margin: 20px 0 0 20px;
+    color: white;
+  }
+
+  .content {
+    height: 100vh;
+    // background-color: $color-font-light;
+    width: 100vw;
+    margin: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    // flex-direction: column;
+
+    .col1 {
+      display: flex;
+
+      .details {
+        .chart {
+          width: 100%;
+
+          img {
+            border-radius: 25px;
+            transition: all 500ms ease-in-out;
+            margin-bottom: 10px;
+            width: 100%;
+
+            &:hover {
+              scale: 1.03;
+              box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+
+        .list {
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            color: white;
+
+            thead {
+              th {
+                background-color: $color-head;
+                padding: 10px 0;
+
+                &:first-child {
+                  border-radius: 7px 0 0 0;
+                }
+
+                &:last-child {
+                  border-radius: 0 7px 0 0;
+                }
+              }
+            }
+
+            tbody {
+              tr {
+                td {
+                  text-align: center;
+                  background-color: #8a5afa;
+                  padding: 15px 0;
+                  border-bottom: 1px solid wheat;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .col2 {
+      margin: 20px;
+      color: white;
+      width: 60%;
+
+      .about {
+        display: flex;
+        justify-content: space-between;
+
+        .text {
+          margin-right: 100px;
+
+          h2 {
+            margin-bottom: 10px;
+          }
+
+          p {
+            text-align: justify;
+            line-height: 1.4;
+          }
+        }
+
+        img {
+          width: 50vh;
+        }
+      }
+
+      .graph {
+        display: flex;
+        padding: 20px 0;
+        gap: 10px;
+
+        img:first-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
